@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "rails-pgsql-persistent",
+    "name": "redmine-persistent",
     "annotations": {
       "openshift.io/display-name": "Rails + PostgreSQL",
       "description": "An example Rails application with a PostgreSQL database. For more information about using this template, including OpenShift considerations, see https://github.com/openshift/rails-ex/blob/master/README.md.",
@@ -17,8 +17,8 @@
   },
   "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/openshift/rails-ex/blob/master/README.md.",
   "labels": {
-      "template": "rails-pgsql-persistent",
-      "app": "rails-pgsql-persistent"
+      "template": "redmine-persistent",
+      "app": "redmine-persistent"
   },
   "objects": [
     {
@@ -136,10 +136,7 @@
               "secret": "${GITHUB_WEBHOOK_SECRET}"
             }
           }
-        ],
-        "postCommit": {
-          "script": ""
-        }
+        ]
       }
     },
     {
@@ -475,7 +472,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "rails-pgsql-persistent"
+      "value": "redmine-persistent"
     },
     {
       "name": "NAMESPACE",
